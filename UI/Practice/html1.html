@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<script>
+    function abc()
+    {
+        res = confirm("Do you really want to close the current window");
+        if(res)
+            close();
+        else
+            alert("You chose to continue...");
+    }
+    function xyz()
+    {
+        var tf = document.getElementById("mi");
+        // alert("Welcome!"+tf.value)
+        document.getElementById("s1").innerText = tf.value;
+    }
+</script>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Java Script Demo</h1>
+    <script src="demo.js"></script>
+    <hr />
+    <h2>
+        <script>
+            var a = 10;
+            a = "hello";
+            a = false;
+            a = 1.5;
+            a = new Date();
+            document.write("<br> Type of a : " + typeof (a));
+        </script>
+        <br /><br />
+        <input type="text" name="t1" id="mi">
+        <button onclick="xyz()">GREET</button>
+        <button onclick="abc()">EXIT</button>
+        Welcome ! <span id="s1"></span>
+    </h2>
+</body>
+</html>

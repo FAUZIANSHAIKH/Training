@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    Enter value of a :<input type="text" id="t1"><br>
+    Enter value of b :<input type="text" id="t2"><br><br />
+    <h1>Result : <span id="s1"></span></h1>
+    <button onclick="add()">ADD</button>
+    <button onclick="sub()">SUBTRACT</button>
+    <button onclick="mul()">MULTIPLY</button>
+    <button onclick="div()">DIVIDE</button>
+    <script>
+        function abc() {
+            res = confirm("Do you really want to close the current window");
+            if (res)
+                close();
+            else
+                alert("You chose to continue...");
+        }
+        function add() {
+            var a1 = document.getElementById("t1");
+            var b1 = document.getElementById("t2");
+            checkNaN(a1, b1);
+            console.log(eval("a1.value + b1.value"));
+            document.getElementById("s1").innerText = parseInt(a1.value)+parseInt(b1.value);
+        }
+        function sub() {
+            var a1 = document.getElementById("t1");
+            var b1 = document.getElementById("t2");
+            checkNaN(a1, b1);
+            document.getElementById("s1").innerText = eval("a1.value - b1.value");
+        }
+        function mul() {
+            var a1 = document.getElementById("t1");
+            var b1 = document.getElementById("t2");
+            checkNaN(a1, b1);
+            document.getElementById("s1").innerText = eval("a1.value * b1.value");
+        }
+        function div() {
+            var a1 = document.getElementById("t1");
+            var b1 = document.getElementById("t2");
+            checkNaN(a1, b1);
+            document.getElementById("s1").innerText = eval("a1.value / b1.value");
+        }
+        function checkNaN(a1,b1) {
+
+            if (isNaN(a1.value) || isNaN(b1.value) || a1.value ==="" || b1.value ==="")
+            {
+                alert("Please enter the integers");
+                return false;
+            }
+                
+            return true;
+        }
+    </script>
+
+</body>
+</html>

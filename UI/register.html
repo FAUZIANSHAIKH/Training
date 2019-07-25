@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        
+        function checkpass()
+        {
+            document.getElementById("span2").innerHTML = "";
+        }
+        function checkcpass()
+        {
+            document.getElementById("span3").innerHTML = "";
+        }
+        function checkname() {
+            document.getElementById("span1").innerHTML = "";
+        }
+        function cname()
+        {
+            var u1 = document.getElementById("t1").value.length;
+            
+            if (u1 < 6 || u1 > 10)
+            {
+                document.getElementById("span1").innerHTML = "Username length should be between 6 and 10";
+                
+          
+            }
+            
+        }
+        function chpass()
+        {
+            var p3 = document.getElementById("t2").value.length;
+            if (p3 < 4 || p3 > 8) {
+                document.getElementById("span2").innerHTML = "Password length should be between 4 and 8";
+            
+            }
+
+        }
+        function cpass()
+        {
+            var p1 = document.getElementById("t2").value;
+            var p2 = document.getElementById("t3").value;
+            
+         
+            var flag = false;
+            if (p1 !== p2)
+                document.getElementById("span3").innerHTML = "Passwords Mismatch";
+              
+
+        }
+
+    </script>
+</head>
+<body>
+    <form onsubmit="return validate()">
+        <h1>REGISTRATION FORM</h1>
+        Username :<input type="text" id="t1" onfocus="checkname()" onblur="cname()"><span id="span1" style="color:red"></span><br>
+        Password :<input type="password" id="t2" onfocus="checkpass()" onblur="chpass()"><span id="span2" style="color:red"></span><br>
+        Confirm Password :<input type="password" id="t3" onfocus="checkcpass()" onblur="cpass"><span id="span3" style="color:red"></span><br>
+        <button type="submit">Register</button>
+    </form>
+    
+</body>
+</html>
