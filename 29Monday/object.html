@@ -1,0 +1,76 @@
+<html>
+<head>
+    <script>
+        function Emp(name, age, salary)
+        {
+            this.name = name;
+            this.age = age;
+            this.salary = salary;
+        }
+    </script>
+</head>
+
+        <body>
+            <h1>Custom objects</h1>
+            <hr />
+            <script>
+                obj1 = new Object();
+                obj1.name = "Ravi";
+                obj1.age = 25;
+                obj1.salary = 20000;
+
+                obj2 = new Object();
+                obj2.name = "Surendra";
+                obj2.age = 35;
+                obj2.salary = 50000;
+
+                document.write("<br>Name  :" + obj1.name);
+                document.write("<br>Age   :" + obj1.age);
+                document.write("<br>Salary:" + obj1.salary);
+                document.write("<br><br>");
+                document.write("<br>Name  :" + obj2.name);
+                document.write("<br>Age   :" + obj2.age);
+                document.write("<br>Salary:" + obj2.salary);
+            </script>
+            <hr />
+            <script>
+                e1 = new Emp("Suraj", 22, 15000);
+                e2 = new Emp("Manoj", 33, 45000);
+                document.write("<br>Name  :" + e1.name);
+                document.write("<br>Age   :" + e1.age);
+                document.write("<br>Salary:" + e1.salary);
+                document.write("<br><br>");
+                document.write("<br>Name  :" + e2.name);
+                document.write("<br>Age   :" + e2.age);
+                document.write("<br>Salary:" + e2.salary);
+            </script>
+            <hr>
+            <script>
+                j1 = { 'name': 'Pratap', 'age': 28, 'salary': 22000 };
+                j2 = { 'name': 'Prasad', 'age': 27, 'salary': 22800 };
+                document.write("<br>Name  :" + j1.name);
+                document.write("<br>Age   :" + j1.age);
+                document.write("<br>Salary:" + j1.salary);
+                document.write("<br><br>");
+                document.write("<br>Name  :" + j2.name);
+                document.write("<br>Age   :" + j2.age);
+                document.write("<br>Salary:" + j2.salary);
+            </script>
+            <hr />
+            <script>
+                document.write("<br>" + Math.PI);
+                document.write("<br>" + Math.E);
+                document.write("<br>" + Math.sqrt(25));
+                document.write("<br>" + Math.cbrt(27));
+                document.write("<br>" + Math.pow(3, 5));
+                document.write("<br>" + Math.ceil(2.1));
+                document.write("<br>" + Math.floor(2.9));
+                document.write("<br>" + Math.round(2.4));
+                var res = parseInt(Math.random() * 28);
+                document.write("<br>" +res);
+                document.write("<br>" + Math.random());
+            </script>
+            <hr />
+        </body>
+
+</html>
